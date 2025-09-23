@@ -4,7 +4,7 @@ import Filters from "./components/Filters.jsx";
 import List from "./components/List.jsx"
 
 
-// Sample data
+// Sample data(will add more later)
 const recipes = [
   { id: 1, title: "Kimchi Rice", category: "Rice", difficulty: "Easy", time: 15,
     summary: "rice + kimchi. " },
