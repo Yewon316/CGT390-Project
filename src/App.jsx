@@ -6,16 +6,70 @@ import List from "./components/List.jsx"
 
 // Sample data(will add more later)
 const recipes = [
-  { id: 1, title: "Kimchi Rice", category: "Rice", difficulty: "Easy", time: 15,
-    summary: "rice + kimchi. " },
-  { id: 2, title: "Garlic Noodles", category: "Noodle", difficulty: "Easy", time: 12,
-    summary: "Noodles with garlic " },
-  { id: 3, title: "Egg Soup", category: "Soup", difficulty: "Easy", time: 10,
-    summary: "soup with egg" },
-  { id: 4, title: "Tuna Mayo rice", category: "Rice", difficulty: "Easy", time: 8,
-    summary: "Tuna + mayo rice" },
-  { id: 5, title: "Tomato Pasta", category: "Noodle", difficulty: "Medium", time: 20,
-    summary: "Tomato noodle that can make in one pot" }
+    {
+      "id": 1,
+      "title": "Kimchi Rice",
+      "category": "Rice",
+      "difficulty": "Easy",
+      "time": 15,
+      "summary": "Rice + kimchi stir-fried with egg and sesame oil."
+    },
+    {
+      "id": 2,
+      "title": "Fried Rice",
+      "category": "Rice",
+      "difficulty": "Easy",
+      "time": 15,
+      "summary": "Leftover rice stir-fried with vegetables, egg, and soy sauce."
+    },
+    {
+      "id": 3,
+      "title": "Pasta with Tomato Sauce",
+      "category": "Pasta",
+      "difficulty": "Easy",
+      "time": 20,
+      "summary": "Boiled pasta mixed with canned tomato sauce, garlic, and olive oil."
+    },
+    {
+      "id": 4,
+      "title": "Omelette",
+      "category": "Egg",
+      "difficulty": "Easy",
+      "time": 10,
+      "summary": "Eggs cooked with onion, cheese, or vegetables folded inside."
+    },
+    {
+      "id": 5,
+      "title": "Ramen Upgrade",
+      "category": "Noodles",
+      "difficulty": "Easy",
+      "time": 10,
+      "summary": "Instant ramen with extra egg, green onion, or cheese for better taste."
+    },
+    {
+      "id": 6,
+      "title": "Grilled Cheese Sandwich",
+      "category": "Bread",
+      "difficulty": "Easy",
+      "time": 10,
+      "summary": "Bread with butter and cheese toasted until golden brown."
+    },
+    {
+      "id": 7,
+      "title": "Stir-fried Vegetables",
+      "category": "Vegetables",
+      "difficulty": "Easy",
+      "time": 12,
+      "summary": "Quick stir-fry of vegetables with garlic and soy sauce."
+    },
+    {
+      "id": 8,
+      "title": "Chicken Salad",
+      "category": "Salad",
+      "difficulty": "Easy",
+      "time": 15,
+      "summary": "Cooked chicken breast mixed with lettuce, cucumber, and dressing."
+    }
 ];
 
 function Header() {
