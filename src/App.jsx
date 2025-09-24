@@ -3,6 +3,9 @@ import RecipeCard from "./components/RecipeCard.jsx";
 import Filters from "./components/Filters.jsx";
 import List from "./components/List.jsx"
 
+// 1. need to add the filter for the level
+// 2. add more recipes
+// 3. work on the detail.
 
 // Sample data(will add more later)
 const recipes = [
@@ -25,7 +28,7 @@ const recipes = [
     {
       "id": 3,
       "title": "Pasta with Tomato Sauce",
-      "category": "Pasta",
+      "category": "Noodle",
       "difficulty": "Easy",
       "time": 20,
       "summary": "Boiled pasta mixed with canned tomato sauce, garlic, and olive oil."
@@ -33,7 +36,7 @@ const recipes = [
     {
       "id": 4,
       "title": "Omelette",
-      "category": "Egg",
+      "category": "Rice",
       "difficulty": "Easy",
       "time": 10,
       "summary": "Eggs cooked with onion, cheese, or vegetables folded inside."
@@ -41,7 +44,7 @@ const recipes = [
     {
       "id": 5,
       "title": "Ramen Upgrade",
-      "category": "Noodles",
+      "category": "Noodle",
       "difficulty": "Easy",
       "time": 10,
       "summary": "Instant ramen with extra egg, green onion, or cheese for better taste."
@@ -58,17 +61,25 @@ const recipes = [
       "id": 7,
       "title": "Stir-fried Vegetables",
       "category": "Vegetables",
-      "difficulty": "Easy",
+      "difficulty": "Medium",
       "time": 12,
       "summary": "Quick stir-fry of vegetables with garlic and soy sauce."
     },
     {
       "id": 8,
       "title": "Chicken Salad",
-      "category": "Salad",
+      "category": "Vegetables",
       "difficulty": "Easy",
       "time": 15,
       "summary": "Cooked chicken breast mixed with lettuce, cucumber, and dressing."
+    },
+    {
+      "id": 9,
+      "title": "Tomato Soup",
+      "category": "Soup",
+      "difficulty": "Medium",
+      "time": 20,
+      "summary": "Soup made with Tomato"
     }
 ];
 

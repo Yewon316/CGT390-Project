@@ -24,6 +24,8 @@ function Filters(props) {
           <option>Rice</option>
           <option>Noodle</option>
           <option>Soup</option>
+          <option>Bread</option>
+          <option>Vegetables</option>
         </select>
       </label>
 
