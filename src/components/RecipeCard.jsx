@@ -10,6 +10,8 @@ function RecipeCard(props) {
         <span> - {r.difficulty}</span>
         <span> - {r.time} min</span>
       </div>
+
+      
       <p className="desc">{r.summary}</p>
       <button onClick={function(){ alert("Not yet"); }}>Detail</button>
     </div>

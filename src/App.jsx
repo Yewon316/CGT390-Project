@@ -98,6 +98,8 @@ export default function App() {
 
   const filtered = recipes.filter(function(item){
     var ok = true;
+
+    
     if (category !== "All" && item.category !== category) ok = false;
     if (search.trim() !== "") {
       var text = (item.title + " " + item.summary).toLowerCase();
