@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
 import RecipeCard from "./components/RecipeCard.jsx";
 import Filters from "./components/Filters.jsx";
-import List from "./components/List.jsx"
+import List from "./components/List.jsx";
+import { Routes, Route, useParams, Link } from "react-router-dom";
 
+// what I have to do
 // 1. need to add the filter for the level
 // 2. add more recipes
 // 3. work on the detail.
@@ -43,7 +45,7 @@ const recipes = [
     },
     {
       "id": 5,
-      "title": "Ramen Upgrade",
+      "title": "Ramen",
       "category": "Noodle",
       "difficulty": "Easy",
       "time": 10,
@@ -114,16 +116,74 @@ export default function App() {
   }
 
   return (
-    <div className="app">
-      <Header />
-      <Filters
-        search={search}
-        category={category}
-        onSearchChange={setSearch}
-        onCategoryChange={setCategory}
-        onReset={handleReset}
-      />
-      <List items={filtered} />
+  <div className="app">
+    <Routes>
+      <Route path="/" element={
+        <Home
+          search={search} category={category}
+          onSearchChange={setSearch} onCategoryChange={setCategory}
+          onReset={handleReset} items={filtered}
+        />
+      } />
+        <Route path="/recipe/:id" element={<RecipeDetail />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
     </div>
   );
 }
+
+function Home(props){
+    return (
+      <>
+        <h1 style={{textAlign:"center"}}>CookAlone</h1>
+        <Filters
+          search={props.search}
+          category={props.category}
+          onSearchChange={props.onSearchChange}
+          onCategoryChange={props.onCategoryChange}
+          onReset={props.onReset}
+        />
+        <List items={props.items} />
+        <p style={{textAlign:"center", marginTop:12}}>
+          <Link to="/about">About</Link>
+        </p>
+      </>
+    );
+  }
+  
+  // RecipeDetail
+  function RecipeDetail(){
+    const { id } = useParams();
+    const item = recipes.find(r => String(r.id) === String(id));
+  
+    useEffect(function(){
+      if (item) document.title = item.title + "CookAlone";
+    window.scrollTo(0,0);
+      return function(){ document.title = "CookAlone"; }; 
+    }, [id]);
+
+  
+    return (
+      <div className="detail">
+        <p><Link to="/"> Back</Link></p>
+        <h2 className="detail-title">{item.title}</h2>
+        <div className="detail-meta">
+          <span>{item.category}</span>
+          <span> - {item.difficulty}</span>
+          <span> - {item.time} min</span>
+          </div>
+        <div className="panel"><b>Summary:</b> {item.summary}</div>
+      </div>
+    );
+  }
+  
+  //About
+  function About(){
+    return (
+      <div className="detail">
+        <h2>About</h2>
+        <p>CookAlone: simple recipes for student who just start cooking</p>
+        <p><Link to="/">Go Home</Link></p>
+      </div>
+    );
+  }
