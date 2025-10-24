@@ -15,8 +15,9 @@ export function AuthProvider(props){
     else localStorage.removeItem("auth:user");
   }, [user]);
 
-  function login(info){ setUser({ email: info.email, name: info.name || info.email }); }
-  function signup(info){ setUser({ email: info.email, name: info.name || info.email }); }
+function login(info){ setUser({ email: info.email, name: info.name || info.email }); }
+function signup(info){ setUser({ email: info.email, name: info.name || info.email }); }
+
   function logout(){ setUser(null); }
 
   var value = { user, login, signup, logout };

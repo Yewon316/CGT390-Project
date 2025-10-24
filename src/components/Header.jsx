@@ -7,6 +7,10 @@ export default function Header(){
   var { user, logout } = useAuth();
   const { favs = [] } = useFavorites?.() || {};
 
+  const displayName =
+    (user && user.name && String(user.name).trim()) ||
+    (user && user.email && String(user.email).split("@")[0]) ||
+    "friend";
 
   return (
     <header className="nav">
@@ -27,7 +31,7 @@ export default function Header(){
         )}
         {user && (
           <>
-            <span className="hello">Hi {user.name - "friend"}</span>
+            <span className="hello">Hi {displayName}</span>
             <button type="button" onClick={logout} className="btn small danger">Log out</button>
           </>
         )}

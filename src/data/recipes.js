@@ -68,7 +68,7 @@ const recipes = [
     ],
         steps: [
         "Boil pasta in salted water until al dente.",
-        "In a pan, sauté garlic in oil, add tomatoes, simmer.",
+        "In a pan, saute garlic in oil, add tomatoes, simmer.",
         "Toss pasta with sauce; season and serve."
     ]
     },
